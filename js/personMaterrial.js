@@ -40,7 +40,7 @@ changeInfo(introductions,'introduction',intro);
 //改头像
 submitAvater.onchange = function(e) {
     let file = e.target.files[0];
-    // getFile(file,img);
+    // getFile(file,img); 都能用
     let url = getObjectURL(file);
     img.setAttribute('src',url);
     upload(file);
