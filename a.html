@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+       div{
+           width: 100%;
+           height: 100vh;
+           position: fixed;
+           top: 0;
+           left: 0;
+           background-color: rgba(102, 51, 153, 0.517);
+           margin: 0;
+       } 
+       p{
+           width: 100%;
+           height: 100vh;
+           position: fixed;
+           top: 0;
+           left: 0;
+           background-color: rgba(85, 153, 51, 0.517);
+           margin: 0;
+       } 
+       
+    </style>
+    <button></button>
+    <!-- <div></div>
+    <p></p> -->
+    <form action="" >
+        <input type="text" name="a" id="">
+        <input type="submit">
+    </form>
+<script>
+    
+//增加cookie
+function addcookie(key,value,time,path,domain){
+    var index = window.location.pathname.lastIndexOf("/");
+    var currrentPath = window.location.pathname.slice(0,index)
+    path = path || currrentPath;
+    domain = domain || document.domain;
+    if(!time){
+        document.cookie = key+"="+value+";path="+path+";domain="+domain+";";
+    }else{
+        var date = new Date();
+        date.setDate(date.getDate() + time);
+        document.cookie = key+"="+value+";expires="+date.toUTCString()+";path="+path+";domain="+domain+";";
+    }
+}
+
+//查看cookie
+function getcookie(key){
+   let res = document.cookie.split(';');
+   for(let i = 0; i < res.length; i++) {
+        var tem = res[i].split('=');
+        if (tem[0].trim() === key) {
+            return tem[1];
+        }
+   }
+}
+
+
+// let as = ['asdf',1232,'d'];
+
+addcookie('a', JSON.stringify(as));
+console.log(getcookie('a')); 
+</script>
+</body>
+</html>

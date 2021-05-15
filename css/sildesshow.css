@@ -1,0 +1,148 @@
+/* 轮播图 */
+
+#view {
+    /* width: 100%; */
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1536px;
+    position: relative;
+
+}
+#view ul {
+    width: 400%;
+    position: relative;
+    left: 0px;
+}
+
+#view ul li {
+    float: left;
+    background: url('../img/bg2.png') no-repeat;
+    background-size: 100% 100%;
+
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#view ul li:nth-child(2) {
+    background: url('../img/banner+.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#view ul li::before {
+    content: '';
+    display: block;
+    padding-bottom: 12%;   /*height/width*/
+}
+
+#view ul li .box{
+    width: 970px;
+    height: 100%;
+
+    position: absolute;
+    background-color: #f3f3f3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0efef;
+}
+
+#view ul li .box .wrap {
+    width: 800px;
+    height: 50%;
+    border: 2px solid #655;
+    padding: 10px;
+
+    box-shadow:  0 0 92px -38px #241f1f;
+
+}
+
+#view ul li .box .wrap p {
+    text-align: center;
+}
+
+#view ul li .box .wrap p:first-of-type {
+    position: relative;
+}
+
+#view ul li .box .wrap p:first-of-type::after,
+#view ul li .box .wrap p:first-of-type::before {
+    content: '';
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+}
+
+#view ul li .box .wrap p:first-of-type::before {
+    bottom: -3px;
+    right: 355px;
+
+    border-bottom: 2px solid #555;
+    border-right: 2px solid #555;
+}
+
+#view ul li .box .wrap p:first-of-type::after {
+    top: -3px;
+    left: 355px;
+
+    border-top: 2px solid #555;
+    border-left: 2px solid #555;
+}
+
+
+
+#view ul li .box .wrap p:last-of-type {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#view ul li:nth-of-type(2) img {
+    position: absolute;
+    height: 50%;
+
+    box-shadow: 2px 3px 8px -1px #241f1f;
+}
+
+#view ul li:nth-of-type(3) .book_logo {
+    position: absolute;
+    text-align: center;
+} 
+
+#view ul li:nth-of-type(3) .book_logo p {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+/* 三个圆点 */
+#view .cir {
+    text-align: center;
+    position: absolute;
+    z-index: 9999;
+    top: 160px;
+    left: 47%;
+}
+
+#view .cir span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #4d4947;
+
+    margin: 0 8px;
+
+    cursor: pointer;
+}
+
+
+#view .cir span.active {
+    background-color: #d9d2cf;
+    box-shadow: -1px -1px 1px #555;
+}

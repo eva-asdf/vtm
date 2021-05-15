@@ -1,0 +1,183 @@
+/* 引入iconfont */
+@font-face {
+	font-family: 'iconfont';
+	src: url('../iconfont/iconfont.ttf?t=1620750720315') format('truetype');
+}
+
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body,p,h1,h2,h3,h4,h5,ul,ol{
+	margin:0;
+	font-family: '微软雅黑';
+}
+ul,
+ol{
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+img{
+	border:none;
+	vertical-align: middle;
+}
+a{
+	text-decoration: none;
+	color: #3c3c3c;
+}
+em{
+	font-style: normal;
+}
+i{
+	font-style: normal;
+}
+input,button{
+	margin: 0;
+	padding: 0;
+}
+button{
+	outline: none;
+}
+body{
+	color: #444;
+	background-color: #f4f5f5;
+}
+input{
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after{
+	content: '';
+  	display: block;
+  	clear: both;
+}
+
+.float_left{
+	float: left;
+}
+
+.float_right{
+	float: right;
+}
+
+.layer{
+	width: 960px;
+	margin: 0 auto;
+}
+/*margin*/
+.mt10{
+	margin-top: 10px;
+}
+
+.mr5{
+	margin-right: 5px;
+}
+
+.mr7{
+	margin-right: 7px;
+}
+
+.mr10{
+	margin-right: 10px;
+}
+
+.ml20{
+	margin-left: 20px;
+}
+
+.ml5{
+	margin-left: 5px;
+}
+
+.mr5{
+	margin-right: 5px;
+}
+
+.mr25{
+	margin-right: 25px;
+}
+
+.mt20{
+	margin-top: 20px;
+}
+
+.mt3{
+	margin-top: 3px;
+}
+/*color*/
+
+.c3 {
+	color: #7d766b;
+}
+
+.c4{
+	color: #f40;
+}
+
+
+.c5{
+	color: #f22e00;
+}
+
+.c6{
+	color: #8fc17a;
+}
+
+.c7{
+	color: #fff;
+}
+
+.c8{
+	color: #717581;
+}
+.c9{
+	color: #615f5f;
+}
+
+.c10{
+	color: #717581;
+}
+
+.blue{
+	color: blue;
+}
+/* 字体大小 */
+.font18{
+	font-size: 18px;
+}
+
+.font20{
+	font-size: 20px;
+}
+
+.font23 {
+	font-size: 23px;
+}
+
+.font25{
+	font-size: 25px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.bccF{
+	background-color: #fff;
+}
+
+
+
+.show {
+	display: block !important;
+}
+
+
+

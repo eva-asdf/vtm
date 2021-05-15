@@ -1,0 +1,251 @@
+@import 'reset.css';
+body {
+
+    /* 背景图充满界面 */
+    background: url('../img/bg\ .png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.person_box {
+    position: absolute;
+    top: 45px;
+    right: 56px;
+}
+
+span.person {
+   width: 78px;
+
+    text-align: center;
+    font-size:20px;
+
+    display: none;
+    
+    cursor: pointer;
+}
+
+.show {
+    display: block !important;
+}
+
+div.person_box > img {
+    margin: 0 14px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: none;
+}
+
+div.person_box .hide {
+    width: 78px;
+    height: 75px;
+    background-color: #6495edc7;
+    border-radius: 5px;
+    padding: 5px 0;
+    box-sizing: border-box;
+
+    color: #fff;
+    text-align: center;
+
+    margin-top: 8px;
+
+    display: none;
+}
+
+div.person_box .hide li {
+    cursor: pointer;
+}
+
+div.person_box .hide li:hover{
+    background-color: cornflowerblue;
+}
+
+div.person_box .hide li a{
+    display: block;
+    color: #fff;
+}
+
+div.box {
+    width: 550px;
+    height: 350px;
+    box-sizing: border-box;
+    padding: 30px 90px;
+
+    /* background-color: #fbfcfa; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+div.box img {
+    box-shadow: 4px 6px 13px -5px rgb(0 0 0);
+}
+
+div.box form {
+    position: relative;
+    width: 100%;
+}
+
+div.box form > span {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    cursor: pointer;
+}
+
+div.box form > input {
+    border: none;
+    outline: none;
+    border-radius: 16px;
+
+    text-indent: 5px;
+
+    width: 100%;
+    height: 30px;
+}
+
+div.box .classify a {
+    display: inline-block;
+    height: 25px;
+    padding: 0 5px;
+    border: 1px solid #aaa;
+    border-radius: 15px; 
+
+    line-height: 25px;
+
+    cursor: pointer;
+}
+
+div.box .classify a:hover{
+    color:#fff;
+    background-color: #8c8f8f;
+}
+
+.login_wrap,
+.loading_box {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    overflow: hidden;
+    display: none;
+}
+
+.loading_box.show,
+.login_wrap.show {
+    display: block;
+}
+
+.login_wrap .login {
+    margin: 100px auto;
+    background-color: #e9eef1b4;
+
+    height: 455px;
+    width: 655px;
+    box-sizing: border-box;
+    padding: 80px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.login_wrap .login img {
+    width: 180px;
+}
+
+.login_wrap .login form input {
+    border: none;
+    outline: none;
+    border: 1px solid #8c8f8f;
+    border-radius: 15px;
+
+    margin: 10px;
+    width: 200px;
+    height: 25px;
+    text-indent: 10px;
+
+}
+
+.login_wrap .login form input[type='submit'] {
+    width: 60px;
+    margin-left: 120px;
+    text-indent: 0;
+}
+
+.login_wrap .login a {
+    margin: 10px  20px;
+    color: #666;
+    text-decoration: underline;
+}
+
+
+
+.login_wrap .login span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.loading_box {
+    background-color: rgb(201 193 193 / 65%);
+}
+
+.loading_box .loading { 
+    width: 200px;
+    height: 100px;
+    margin: 350px auto;
+    text-align: center;
+}
+
+
+.loading_box p {
+    font-size: 30px;
+    
+}
+
+.loading_box span {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.loading_box span.active {
+
+    background-color: #626262;
+}
+
+/* 错误弹框 */
+ .error {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #65c1fa42;
+    position: fixed;
+    top: 60px;
+    right: 50px;
+
+    display: none;
+}
+

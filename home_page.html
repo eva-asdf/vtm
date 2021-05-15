@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home-page.css">
+
+</head>
+<body>
+    <div class="person_box">
+        <span class="iconfont person show">&#xe515</span>
+        <img src="img/d.jpg" alt="">
+        <ul class="hide">
+            <li class="collect"><a href="personal.html">我的主页</a></li>
+            <li><a href="class.html">分类</a></li>
+            <li>登出</li>
+        </ul>
+    </div>
+    <div class="box">
+        <img src="img/纯logo.png" alt="" class="logo">
+        <p class="c3">The books that know you</p>
+        <form action="search.html" id="form">
+            <input type="text" name="search" placeholder="搜索">
+            <span class="iconfont">&#xe602</span>
+        </form>
+        <div class="classify">
+            <a href="class.html">大类1</a>
+            <a href="class.html">大类2</a>
+            <a href="class.html">大类3</a>
+            <a href="class.html">大类4</a>
+        </div>
+    </div>
+
+
+<!-- 登录 -->
+<div class="login_wrap">
+    <div class="login">
+        <span class="iconfont close">&#xe670</span>
+        <img src="img/纯logo.png" alt="">
+        <form action="" >
+            <label for="name">账号：</label>
+            <input type="text" name="name" placeholder="用户名" autofocus pattern="^[a-zA-Z]+$" required class="name"><br>
+            <label for="password">密码：</label>
+            <input type="password" name="password" pattern="^[1-9]{6,10}$" required class="password"><br>
+            <input type="submit" value="登录" onclick="inLogin(); return false;">
+            <a href="">注册</a>
+        </form>
+    </div>
+</div>
+
+<!-- 错误弹框 -->
+<div class="error"></div>
+
+
+<!-- 加载中 -->
+<div class="loading_box">
+    <div class="loading">
+        <p>Loading</p>
+        <div>
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span class="active" style="--i:2"></span>
+        </div>
+    </div>
+    
+</div>
+
+
+<script type="text/javascript" src="http://mockjs.com/dist/mock.js"></script>
+<script type="text/javascript" src="js/book-mock.js"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="js/tools.js"></script>
+<script src="js/sildesshow.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>

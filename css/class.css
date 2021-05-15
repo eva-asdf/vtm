@@ -1,0 +1,57 @@
+@import 'reset.css';
+
+
+/* 分类 */
+#kind {
+    padding: 20px 0 10px;
+    border-bottom: 1px solid #c0b0b0;
+    /* display: none; */
+}
+
+#kind .nav {
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c0b0b0;
+}
+
+#kind .nav li {
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#kind .nav li:first-of-type {
+    color: #a7a7a7;
+    margin-right: 15px;
+    cursor: default;
+    
+}
+
+#kind .nav li:nth-of-type(n+2):hover {
+    color: #eba155;
+}
+
+#kind .nav li.active {
+    color: #eba155;
+}
+
+#kind .content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px 0 20px;
+}
+
+#kind  div.books_box {
+    width: 25%;
+    height: 400px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#kind > div.books_box img {
+  margin: 30px 0 10px;
+  width: 200px;
+}

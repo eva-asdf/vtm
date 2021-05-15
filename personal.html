@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sildesshow.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/page-btn.css">
+    <link rel="stylesheet" href="css/person_materrial.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 轮播图 -->
+    <div id="view">
+        <!-- 三个圆点 -->
+        <div class="cir">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="clearfix">
+            <li>
+                <div class="box">
+                    <div class="wrap">
+                        <p>今日推荐</p>
+                        <p>震惊！维生数前端居然是这样考核</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="img/纯logo.png" alt="">
+            </li>
+            <li>
+                <div class="book_logo">
+                    <img src="img/book.png" alt="">
+                    <p>推书，推你所想</p>
+                </div>
+            </li>
+        </ul>
+    </div>  
+    <!-- 主页 -->
+    <div id="personal" class="layer show">
+        <div class="user clearfix">
+            <img src="img/d.jpg" alt="">
+            <span class="user_name">a</span>
+            <span class="intro">这个人很懒，什么都没留下</span>
+            <p class="edit">编辑个人资料</p>
+        </div>
+        <div class="my_collect">
+            <p>我的收藏</p>
+            <div class="content">
+
+            </div>
+            <div class="page_wrap layer">
+
+            </div>
+        </div>
+    </div>
+    <!-- 个人资料页 -->
+    <div id="person_materrial">
+        <div class="layer">
+            <ul class="return">
+                <li class="return_person">&lt;返回个人首页</li>
+                <li>个人资料</li>
+                <li>账号设置</li>
+            </ul>
+            <div class="list">
+                <h3 class="person_data">
+                    个人资料
+                </h3>
+                <ul>
+                    <li class="avater clearfix">
+                        <span  class="float_left">头像</span>
+                        <img src="" alt=""  class="float_left">
+                        <div class="float_left">
+                            <p class="tip">支持jpg,png,jpeg格式大小5M以内图片</p>
+                            <form class="submit">
+                                点击上传
+                                <input type="file" onchange="upload(this)" name="file">
+                            </form>
+                        </div>
+                        
+                    </li>
+                    <li class="username">
+                        <span>用户名</span>
+                        <span></span>
+                        <span class="iconfont">&#xe508;修改</span>
+                    </li>
+                    <li>
+                        <span>职位</span>
+                        <span>填写你的职位</span>
+                        <span class="iconfont">&#xe508;修改</span>
+                    </li>
+                    <li>
+                        <span>公司</span>
+                        <span>填写你的公司</span>
+                        <span class="iconfont">&#xe508;修改</span>
+                    </li>
+                    <li class="introduction">
+                        <span>个人介绍</span>
+                        <span>填写职业技能，擅长的东西，喜欢的事情等</span>
+                        <span class="iconfont">&#xe508;修改</span>
+                    </li>
+                    <li>
+                        <span>个人主页</span>
+                        <span>填写个人主页</span>
+                        <span class="iconfont">&#xe508;修改</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+
+
+<script type="text/javascript" src="http://mockjs.com/dist/mock.js"></script>
+<script type="text/javascript" src="js/book-mock.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/sildesshow.js"></script>
+<!-- <script src="js/collet.js"></script> -->
+<script src="js/personMaterrial.js"></script>
+</body>
+</html>

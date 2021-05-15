@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sildesshow.css">
+    <link rel="stylesheet" href="css/search-box.css">
+
+</head>
+<body>
+    <!-- 搜索框 -->
+    <div id="top_nav">
+        <div class="layer clearfix">
+            <h2 class="float_left"></h2>
+            <form action="" class="float_right">
+                <input type="text" placeholder="请搜索">
+                <span class="iconfont">&#xe602</span>
+            </form>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div id="view">
+        <!-- 三个圆点 -->
+        <div class="cir">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="clearfix">
+            <li>
+                <div class="box">
+                    <div class="wrap">
+                        <p>今日推荐</p>
+                        <p>震惊！维生数前端居然是这样考核</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="img/纯logo.png" alt="">
+            </li>
+            <li>
+                <div class="book_logo">
+                    <img src="img/book.png" alt="">
+                    <p>推书，推你所想</p>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>   
+
+    
+    <!-- 详情页 -->
+    <div id="details" class="show">
+        <div class="layer">
+            <ul class="aside">
+                <li class="iconfont" data-aside = '1'>&#xe632;</li>
+                <li class="iconfont" data-aside = '2'>&#xe52a;</li>
+                <li class="iconfont" data-aside = '3'>&#xe60b;</li>
+            </ul>
+            <div class="close"><span>X</span></div>
+            <img src="img/bookcover.png" alt="">
+            <div class="details_box">
+                <p class="boox_name">boox_name</p>
+                <div class="author">
+                    <span class="iconfont">&#xe515;</span>|<span>author</span>
+                </div>
+                <div class="publish">
+                    <span class="iconfont">&#xe608;</span>|<span>publish</span>
+                </div>
+                <br><br><br>
+                <div class="time">
+                    <span class="iconfont">&#xe560;</span>|<span class="time">time</span>
+                </div>
+                <div class="books_number">
+                    <span class="iconfont">&#xe61b;</span>|<span>图书馆藏书：<i>
+                        <span class="num">1</span>本<br><span class="locate">1楼</span>
+                    </i></span>
+                </div>
+                <br><br><br>
+                <div class="book_url">
+                    <span class="iconfont">&#xe624;</span>|<a  href="" class="iconfont doubang">&#xe62f</a><a  href="" class="zhihu">知</a>
+                </div>
+                <div class="buy_url">
+                    <span class="iconfont">&#xe502;</span>|<a  href="" class="iconfont jd">&#xe83f;</a><a  href="" class="iconfont Dang">&#xe664;</a><a  href="" class="iconfont Amazon">&#xe658;</a>
+                </div>
+            </div>
+            <p class="font18" style="width: 100%;">作者简介</p>    
+            <p class="author_summary"></p>
+            <p  class="font18">书籍简介</p>    
+            <p class="book_summary"></p>
+        </div>
+    </div>
+
+    
+
+    <script type="text/javascript" src="http://mockjs.com/dist/mock.js"></script>
+    <script type="text/javascript" src="js/book-mock.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/sildesshow.js"></script>
+    <script src="js/detalis.js"></script>
+</body>
+</html>

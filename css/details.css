@@ -1,0 +1,155 @@
+#details {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    
+    background-color: #a7a7a7db;
+    width: 100%;
+    /* height: 600px; */
+    display: none;
+}
+
+#details > div{
+    width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    background-color: #fafafa;
+    /* height: 400px; */
+    position: relative;
+    box-sizing: border-box;
+    padding: 160px 100px;
+}
+
+#details > div::after,
+#details > div::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+#details > div::after {
+    top: 80px;
+    left: 80px;
+    border-top: 1px solid #eba155;
+    border-left: 1px solid #eba155;
+}
+
+#details > div::before {
+    bottom: 80px;
+    right: 80px;
+    border-bottom: 1px solid #eba155;
+    border-right: 1px solid #eba155;
+}
+
+#details img {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#details .details_box {
+    padding-top: 40px;
+    margin:0 70px 0 40px;
+    color: #000;
+    width: 240px;
+}
+
+.zhihu {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 3px;
+    background-color: black;
+    color: #fff;
+    line-height: 22px;
+    text-align: center;
+    margin-top: -2px;
+    margin-top: 1px;
+}
+
+#details .details_box p:first-of-type {
+    font-size: 25px;
+    margin-left: 25px;
+}
+
+#details .details_box a.iconfont,
+#details .details_box span.iconfont {
+    font-size: 22px;
+    margin: 0 6px;
+    /* cursor: pointer; */
+    color: black;
+}
+
+
+#details .details_box .buy_url span:nth-of-type(n+2) {
+    font-size: 30px;
+}
+
+#details .details_box .books_number {
+    position: relative;
+}
+#details .details_box .books_number i {
+    width: 100px;
+    position: absolute;
+}
+
+#details .author_summary {
+    margin: 30px 0 50px; 
+    width: 100%;
+}
+
+#details .book_summary {
+    margin: 30px 0 50px; 
+}
+
+
+
+#details .close {
+    width: 0px;
+    height: 0px;
+    border: 30px solid blueviolet;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#details .close span {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+#details ul.aside {
+    position: absolute;
+    top: 165px;
+    left: -45px;
+}
+
+#details ul.aside li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 10px 0;
+
+    text-align: center;
+    line-height: 30px;
+
+    box-shadow: 3px 1px 3px 3px #999;
+
+    cursor: pointer;
+}
+
+#details ul.aside li.active {
+    color: rgba(255, 0, 0, 0.435);
+}
+
+
+

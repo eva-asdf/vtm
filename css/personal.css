@@ -1,0 +1,80 @@
+#personal {
+    padding: 20px 0;
+
+    display: none;
+}
+
+#personal .user {
+    background-color: white;
+    padding: 20px 30px;
+}
+
+
+#personal .user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#personal .user .edit {
+
+    float: right;
+
+    width: 120px;
+    height: 36px;
+    border: 2px solid rgba(52, 2, 253, 0.496);
+    border-radius: 5px;
+    margin-top: 22px;
+    margin-right: 30px;
+
+    line-height: 36px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+#personal .user .user_name {
+    margin-left: 30px;
+}
+
+#personal .user .intro {
+    /* line-height: 60px; */
+    vertical-align: bottom;
+    font-size: 14px;
+    color: #999;
+}
+
+#personal .my_collect {
+    width: 100%;
+    background-color: white;
+    min-height: 100px;
+    margin-top: 30px;
+
+    /* padding: 20px 50px; */
+}
+
+#personal .my_collect p:nth-of-type(1) {
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+#personal .my_collect .content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px 0 20px;
+}
+
+#personal .my_collect div.books_box {
+    width: 25%;
+    height: 400px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#personal .my_collect div.books_box img {
+  margin: 30px 0 10px;
+  width: 200px;
+}
