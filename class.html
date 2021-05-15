@@ -15,9 +15,9 @@
     <div id="top_nav">
         <div class="layer clearfix">
             <h2 class="float_left"></h2>
-            <form action="" class="float_right">
-                <input type="text" placeholder="请搜索">
-                <span class="iconfont">&#xe602</span>
+            <form action="search.html" class="float_right">
+                <input type="text" placeholder="请搜索" onkeydown="searchReturn(event);">
+                <span class="iconfont" onclick="searchJump()">&#xe602</span>
             </form>
         </div>
     </div>
@@ -72,7 +72,6 @@
     <script type="text/javascript" src="http://mockjs.com/dist/mock.js"></script>
     <script type="text/javascript" src="js/book-mock.js"></script>
     <script src="js/tools.js"></script>
-    <!-- <script src="js/detalis.js"></script> -->
     <script src="js/class.js"></script>
     <script src="js/sildesshow.js"></script>
     

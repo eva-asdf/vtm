@@ -16,9 +16,9 @@
     <div id="top_nav">
         <div class="layer clearfix">
             <h2 class="float_left"></h2>
-            <form action="" class="float_right">
-                <input type="text" placeholder="请搜索">
-                <span class="iconfont">&#xe602</span>
+            <form action="search.html" class="float_right">
+                <input type="text" placeholder="请搜索" onkeydown="searchReturn(event);">
+                <span class="iconfont" onclick="searchJump()">&#xe602</span>
             </form>
         </div>
     </div>
@@ -84,10 +84,10 @@
                 </div>
                 <br><br><br>
                 <div class="book_url">
-                    <span class="iconfont">&#xe624;</span>|<a  href="" class="iconfont doubang">&#xe62f</a><a  href="" class="zhihu">知</a>
+                    <span class="iconfont">&#xe624;</span>|<a  href="" class="iconfont doubanUrl url">&#xe62f</a><a  href="" class="zhihuUrl url">知</a>
                 </div>
                 <div class="buy_url">
-                    <span class="iconfont">&#xe502;</span>|<a  href="" class="iconfont jd">&#xe83f;</a><a  href="" class="iconfont Dang">&#xe664;</a><a  href="" class="iconfont Amazon">&#xe658;</a>
+                    <span class="iconfont">&#xe502;</span>|<a  href="" class="iconfont jDUrl url">&#xe83f;</a><a  href="" class="iconfont DangUrl url">&#xe664;</a><a  href="" class="iconfont AmazonUrl url">&#xe658;</a>
                 </div>
             </div>
             <p class="font18" style="width: 100%;">作者简介</p>    

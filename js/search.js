@@ -91,6 +91,7 @@ searchBtn.onclick = function() {
     searchName.innerHTML = oinput.value;
     if (oinput.value.trim() == '') {
         showBook('http://vtmer.cn/search',{},0);
+        deleteCookie('search-key');
        return;
     }
     showBook('http://vtmer.cn/search1',

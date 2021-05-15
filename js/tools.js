@@ -185,3 +185,17 @@ function getFile(file,img) {
         img.setAttribute('src',result);
     }
 }
+
+
+//点击icon跳转
+function searchJump() {
+    addcookie('search-key',searchinput.value);
+    window.location.href = 'search.html';
+}
+//回车跳转
+function searchReturn(e) {
+    if(e.keyCode == 13) {
+        searchJump();
+        return false;
+    }
+}

@@ -146,10 +146,13 @@ userpassword.oninput = userName.oninput;
 /*******************搜索跳转***************************/
 let searchBtn = document.querySelector('div.box form > span'),
     searchinput = document.querySelector('div.box form > input');    
-searchBtn.onclick = function() {
-    addcookie('search-key',searchinput.value);
-    window.location.href = 'search.html';
+
+
+//聚焦时‘搜索’消失
+searchinput.onfocus = function() {
+    searchinput.setAttribute('placeholder','');
 }
 
-
-
+searchinput.onblur = function() {
+    searchinput.setAttribute('placeholder','搜索');
+}

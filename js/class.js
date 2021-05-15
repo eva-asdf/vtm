@@ -35,11 +35,8 @@ liClass.forEach((value,index) => {
     
 })
 
+
+
 /*******************搜索跳转***************************/
 let searchBtn = document.querySelector('#top_nav form > span'),
-    searchinput = document.querySelector('#top_nav form > input');    
-searchBtn.onclick = function() {
-    addcookie('search-key',searchinput.value);
-    window.location.href = 'search.html';
-}
-
+    searchinput = document.querySelector('#top_nav form > input');

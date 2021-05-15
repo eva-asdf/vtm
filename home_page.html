@@ -22,8 +22,8 @@
         <img src="img/纯logo.png" alt="" class="logo">
         <p class="c3">The books that know you</p>
         <form action="search.html" id="form">
-            <input type="text" name="search" placeholder="搜索">
-            <span class="iconfont">&#xe602</span>
+            <input type="text" name="search" placeholder="搜索" onkeydown="searchReturn(event);">
+            <span class="iconfont" onclick="searchJump()">&#xe602</span>
         </form>
         <div class="classify">
             <a href="class.html">大类1</a>
@@ -70,9 +70,7 @@
 
 <script type="text/javascript" src="http://mockjs.com/dist/mock.js"></script>
 <script type="text/javascript" src="js/book-mock.js"></script>
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <script src="js/tools.js"></script>
-<script src="js/sildesshow.js"></script>
 <script src="js/login.js"></script>
 
 </body>

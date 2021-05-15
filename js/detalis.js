@@ -7,20 +7,21 @@ let details_box = document.querySelector('#details'),//详情页
     locate = details_box.querySelector('.details_box span.locate'),//位置
     ahthorIntro = details_box.querySelector('.author_summary'),//作者介绍
     bookIntro = details_box.querySelector('.book_summary'),//书本介绍
-    doubang = document.querySelector('.doubang'),//豆瓣
-    zhihu = document.querySelector('.zhihu'),//知乎
-    jd = document.querySelector('.jd'),//京东
-    Dang = document.querySelector('.Dang'),//当当
-    Amazon = document.querySelector('.Amazon'),//亚马逊
+    doubanUrl = document.querySelector('.doubanUrl'),//豆瓣
+    zhihuUrl = document.querySelector('.zhihuUrl'),//知乎
+    jDUrl = document.querySelector('.jDUrl'),//京东
+    DangUrl = document.querySelector('.DangUrl'),//当当
+    AmazonUrl = document.querySelector('.AmazonUrl'),//亚马逊
     closeDetails = details.querySelector('.close span'),
     aside = details_box.querySelector('.aside'),
     asideLi = aside.querySelectorAll('li');
 
-
+let url = document.querySelectorAll('.url');
+console.log(url);
 //关闭详情页
 closeDetails.onclick = function() {
     // window.history.go(-1);
-    history.back();//不刷新页面 
+    history.back();
     // addcookie('return',1);
 } 
 
@@ -31,10 +32,33 @@ obj = JSON.parse(getcookie('details'));
 showDetails(obj);
 
 function showDetails(obj) {
+    //展示icon
+    url.forEach(value => {
+        value.style.display = 'inline';
+    })
+    //除去侧边栏元素活跃状态
     asideLi.forEach(value => {
         value.classList.remove('active');
     });
-    // main.style.display = 'none';
+
+    //将当获取不到其中一项信息显示：待更新
+    for(let p in obj) {
+        if (!obj[p]) {
+            obj[p] = '待更新';
+        }
+    } 
+    //若是icon，则直接不显示
+    for(let p in obj.bookUrl[0]) {
+        if (!obj.bookUrl[0][p]) {
+            document.querySelector('.'+p).style.display = 'none';
+        }
+    }
+    for(let p in obj.buyUrl[0]) {
+        if (!obj.buyUrl[0][p]) {
+            document.querySelector('.'+p).style.display = 'none';
+        }
+    }
+
     bookName.innerText = decodeURIComponent(obj.title);
     author.innerText = obj.author;
     publish.innerText = obj.publish;
@@ -43,12 +67,11 @@ function showDetails(obj) {
     locate.innerText = obj.library[0].position;
     ahthorIntro.innerText = obj.ahthorIntro;
     bookIntro.innerText = obj.bookIntro;
-    doubang.href = 'http://' + obj.bookUrl[0].doubanUrl;
-    zhihu.href = 'http://' + obj.bookUrl[0].zhihuUrl;
-    jd.href = 'http://' + obj.buyUrl[0].jDUrl;
-    Dang.href = 'http://' + obj.buyUrl[0].DangUrl;
-    Amazon.href = 'http://' + obj.buyUrl[0].AmazonUrl;
-    console.log(obj.isLike);
+    doubanUrl.href = 'http://' + obj.bookUrl[0].doubanUrl;
+    zhihuUrl.href = 'http://' + obj.bookUrl[0].zhihuUrl;
+    jDUrl.href = 'http://' + obj.buyUrl[0].jDUrl;
+    DangUrl.href = 'http://' + obj.buyUrl[0].DangUrl;
+    AmazonUrl.AmazonUrl = 'http://' + obj.buyUrl[0].AmazonUrl;
     if (obj.isLike) {
         asideLi[0].classList.add('active'); 
     }else {
@@ -96,3 +119,8 @@ function bookInteract(obj,url) {
         }
     )
 }
+
+
+/*******************搜索跳转***************************/
+let searchBtn = document.querySelector('#top_nav form > span'),
+    searchinput = document.querySelector('#top_nav form > input');    
