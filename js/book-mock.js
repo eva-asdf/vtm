@@ -78,6 +78,8 @@ Mock.mock('http://vtmer.cn/class', {
  				}]
          	}]
      });
+
+
 Mock.mock('http://vtmer.cn/search', {
                // 书的大分类
                'bookclass':[{
@@ -125,6 +127,11 @@ Mock.mock('http://vtmer.cn/search', {
           }]
      });
 
+
+Mock.mock('http://vtmer.cn/changeUserInfo') 
+
+
+Mock.mock('http://vtmer.cn/changeUserAvatar') 
 
 
 Mock.mock('http://vtmer.cn/search1',function(r) {
