@@ -275,4 +275,9 @@ Mock.mock('http://vtmer.cn/collect', {
      });
 
 
-
+//登录
+Mock.mock('http://vtmer.cn/signUp',
+{
+     
+}
+)
