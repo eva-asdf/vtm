@@ -1,5 +1,9 @@
-
-// ----------------------------------------------------------------------------------------
+/**
+ * *大类界面*
+ *  展示第几类及其书本
+ * 
+ *  搜索跳转
+ */
 
 let liClass = document.querySelectorAll('#kind .nav li:nth-of-type(n+2)'),
     pageWrap = document.querySelector('.page_wrap');//页数按钮
@@ -29,8 +33,10 @@ function showActive(arr,target) {
 //大类显示
 liClass.forEach((value,index) => {
     value.onclick = function() {
+        addcookie('classId',index);
         showActive(liClass,value);
         show(main,index,0,pageWrap,'http://vtmer.cn/class');
+        
     }
     
 })

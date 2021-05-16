@@ -6,7 +6,7 @@ function changeArray(obj){
     obj.time = new Date().getTime();
     return arr.join("&");
 }
-
+//获取ajax，类型，POST,GET,
 function getAjax(type,url,obj,timeout,success,error){ 
     var str = changeArray(obj);          
     var xmlhttp,
@@ -93,14 +93,14 @@ function showError(message) {
 // 分割数组
 function spArr(arr, num) {
 	let newArr = [];
-	for (let i = 0; i < arr.length;) { //  !!  这里与for循环不太一样的是，没有i++
+	for (let i = 0; i < arr.length;) { //  !!  这里与for循环不太一样的是，没有i++,每次截取后arr.length减小，（其实可用while）
 		newArr.push(arr.slice(i, i += num)); 
 	}
 	return newArr
 }
 
 
-//展示class类的书
+//展示class类的书 （要用到2次，所以封装）
 function show(main,index,page,pageWrap,url) {//index是第几类，page是第几页  ,pageWrap是页数按钮
     main.innerHTML = '';
     getAjax(
@@ -113,6 +113,13 @@ function show(main,index,page,pageWrap,url) {//index是第几类，page是第几
                 num = [],
                 newArr = spArr(arr,8),
                 pageNum = newArr.length;
+            if (arr.length == 0) {
+                let  noBook = `<div class="none">
+                                    暂无收藏
+                                </div>`;
+                main.innerHTML = noBook;          
+                return;
+            }
             newArr[page].forEach(value => {
                for(let j = 0; j < 5; j++){
                    if(value.socre > j) {
@@ -161,7 +168,7 @@ function show(main,index,page,pageWrap,url) {//index是第几类，page是第几
 }
 
 
-//获取文件路径
+//获取文件路径，用于展示图片
 function getObjectURL(file) {
     let url;
     if (window.createObjectURL) {
@@ -175,7 +182,7 @@ function getObjectURL(file) {
 }
 
 
-//获取图片
+//获取图片，可用于预览
 function getFile(file,img) {
     let reader = new FileReader();
     reader.readAsDataURL(file);

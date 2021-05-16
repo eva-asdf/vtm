@@ -1,4 +1,7 @@
 @import 'reset.css';
+/*
+    主页
+ */
 body {
 
     /* 背景图充满界面 */
@@ -29,10 +32,6 @@ span.person {
     display: none;
     
     cursor: pointer;
-}
-
-.show {
-    display: block !important;
 }
 
 div.person_box > img {

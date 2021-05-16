@@ -1,7 +1,15 @@
+/**
+ * *个人资料界面*
+ *  修改用户信息
+ *      支持修改头像，用户名，和用户简介
+ *      （其他修改类似，就不重复）
+ *          点击修改时添加输入框，完成时删除input
+ */
 let personal = document.querySelector('#personal'),
     collet = personal.querySelector('.content'),
     pageWrap = personal.querySelector('.page_wrap'),
-    userId = getcookie('userId');
+    userId = getcookie('userId'),
+    returnHome = personal.querySelector('.return_home');
 
 show(collet,0,0,pageWrap,'http://vtmer.cn/collect');
 
@@ -16,7 +24,10 @@ edit.onclick = function() {
 let submitAvater = document.querySelector('#person_materrial .list li.avater .submit input');
 let form = document.querySelector("#person_materrial .list li.avater .submit");
 
-
+returnHome.onclick = function() {
+    addcookie('login',1);
+    window.location.href = '../home_page.html';
+}
 
 //改用户信息
 let userName1 = document.querySelector('#person_materrial .list > ul li.username > span.iconfont:last-of-type'),//名字修改键
@@ -60,7 +71,7 @@ function upload(file) {
     }
 }
 function success(xhr) {
-    var data = JSON.parse(xhr.response).data;
+    var data = JSON.parse(xhr.response);
     console.log(data.message);
 }
 

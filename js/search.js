@@ -1,3 +1,10 @@
+/**
+ * *搜索界面*
+ *  搜索展示
+ *      搜索内容为空时，默认展示全部
+ *      不为空时，展示书名相同书籍
+ * 
+ */
 const main = document.querySelector('#main'),
       searchBtn = document.querySelector('#top_nav .layer form span'),
       searchName = document.querySelector('#search_box .search_name'),

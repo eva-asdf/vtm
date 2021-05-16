@@ -21,6 +21,14 @@ var person = document.querySelector(".person"),
 let userId;
 
 
+//判断是否从其他页回来，若是，则显示已登录
+let loginStatus = getcookie('login');
+if (loginStatus) {
+    person.classList.remove('show');
+    avatar.classList.add('show');
+}
+
+//点击头像菜单的出现与消失
 let flag;
 document.onclick = function(e) {
     var target = e.target;
@@ -35,17 +43,19 @@ document.onclick = function(e) {
         flag = personNav.classList.contains('show');
         personNav.classList.toggle('show');
     }
-
 }
 
 personNavLi[0].onclick = function() {
     addcookie('userId',userId);
 }
 
+
+//登出
 personNavLi[2].onclick = function() {
-    person.setAttribute('data-status','0');
-    person.innerHTML = '&#xe515';
-    personNav.classList.remove('show');
+    person.classList.add('show');
+    avatar.classList.remove('show');
+    deleteCookie('login');
+    // personNav.classList.remove('show');
 }
 
 
@@ -79,11 +89,7 @@ function inLogin() {
             let reg1 = /^[a-zA-Z]+$/,
                 reg2 = /^[1-9]{6,10}$/;
             if(userName.value == names && userpassword.value == password) {
-                /***********让登录状态切换为已登录********************/
-                // person.innerHTML = names;
-                person.classList.remove('show');
-                avatar.setAttribute('src',avatarSrc);
-                avatar.classList.add('show');
+               
                 /********** 加载 **************/
                  
                 loginWrap.classList.remove('show');
@@ -99,6 +105,12 @@ function inLogin() {
                     }
                 },200)
                 timer2 = setTimeout(function() {
+                     /***********让登录状态切换为已登录********************/
+                    // person.innerHTML = names;
+                    person.classList.remove('show');
+                    avatar.setAttribute('src',avatarSrc);
+                    avatar.classList.add('show');
+
                     clearInterval(timer1);
                     clearTimeout(timer2);
                     loadingBox.classList.remove('show');

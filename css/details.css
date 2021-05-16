@@ -151,5 +151,40 @@
     color: rgba(255, 0, 0, 0.435);
 }
 
+#details ul.aside li:nth-of-type(3) {
+    position: relative;
+}
 
+#details ul.aside li div {
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px;
 
+    position: absolute;
+    top: -5px;
+    left: 100px;
+
+    background-color: rgba(255, 127, 80, 0.856);
+    
+    color: #aaa;
+
+    transition: left .5s;
+}
+
+#details ul.aside li div::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: rgba(255, 127, 80, 0.856);
+}
+
+#details ul.aside li:hover div {
+    overflow: visible;
+    padding: 5px 10px;
+    height: 30px;
+    left: 45px;
+}

@@ -1,3 +1,18 @@
+/**
+ * *书本详情界面*
+ *  展示书本详情内容
+ *      
+ *  搜索跳转
+ *     回车，点击放大镜跳转页面
+ * 
+ *  点击 X 返回上一页
+ *  
+ *  侧边栏互动
+ *      支持点赞，收藏
+ *      点击分数按钮，展示书籍评分
+ *  
+ */
+
 let details_box = document.querySelector('#details'),//详情页
     bookName = details_box.querySelector('.details_box .boox_name')
     author = details_box.querySelector('.details_box .author span:last-of-type'),//作者
@@ -14,15 +29,12 @@ let details_box = document.querySelector('#details'),//详情页
     AmazonUrl = document.querySelector('.AmazonUrl'),//亚马逊
     closeDetails = details.querySelector('.close span'),
     aside = details_box.querySelector('.aside'),
-    asideLi = aside.querySelectorAll('li');
-
+    asideLi = aside.querySelectorAll('li'),
+    socre = asideLi[2].querySelector('span');
 let url = document.querySelectorAll('.url');
-console.log(url);
 //关闭详情页
 closeDetails.onclick = function() {
-    // window.history.go(-1);
     history.back();
-    // addcookie('return',1);
 } 
 
 //详情页
@@ -77,6 +89,14 @@ function showDetails(obj) {
     }else {
         asideLi[0].classList.remove('active'); 
     }
+    // 书籍评分
+    for(let i = 0; i < 5; i++) {
+        if (i < obj.socre) {
+            socre.innerHTML += '&#xe52a;'
+        }else {
+            socre.innerHTML += '&#xe616;'
+        }
+    }
     details_box.classList.add('show');
 }
 
@@ -87,9 +107,7 @@ aside.onclick = function(e) {
     data = target.dataset.aside,
     url;
     if (data && !target.classList.contains('active')) {
-        url = data == 1? 'http://vtmer.cn/likeBook':'http://vtmer.cn/collect';
-        console.log(url);
-        console.log(target);
+        url = data == 1? 'http://vtmer.cn/likeBook':'http://vtmer.cn/collectbook';
         bookInteract(target,url);
     }else if (data && target.classList.contains('active')) {
         url = data == 1? 'http://vtmer.cn/cancleLikeBook':'http://vtmer.cn/cancleCollect';
@@ -97,8 +115,7 @@ aside.onclick = function(e) {
     }
 }
 
-
-//侧边互动
+//侧边互动之点赞，收藏
 function bookInteract(obj,url) {
     getAjax(
         'POST',
@@ -109,7 +126,6 @@ function bookInteract(obj,url) {
         3000,
         function(xhr) {//收藏成功
             let message = JSON.parse(xhr.response).message;
-            console.log(message);
             if (message == '点赞成功' || message == '收藏成功') {
                 console.log(1);
                 obj.classList.add('active');
@@ -119,7 +135,6 @@ function bookInteract(obj,url) {
         }
     )
 }
-
 
 /*******************搜索跳转***************************/
 let searchBtn = document.querySelector('#top_nav form > span'),

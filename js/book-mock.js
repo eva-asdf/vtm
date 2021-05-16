@@ -21,6 +21,11 @@
 //           	password:'@string(lower+number,6,10)'
 //           }]         
 //      });
+
+/**
+ * 改动
+ *   用户信息
+ */
 Mock.mock('http://vtmer.cn/login', {
      'user|1':[{
           	name:'caichuangji',
@@ -131,7 +136,11 @@ Mock.mock('http://vtmer.cn/search', {
 Mock.mock('http://vtmer.cn/changeUserInfo') 
 
 
-Mock.mock('http://vtmer.cn/changeUserAvatar') 
+Mock.mock('http://vtmer.cn/changeUserAvatar',
+     {
+          'message':'成功'
+     }
+) 
 
 
 Mock.mock('http://vtmer.cn/search1',function(r) {
@@ -199,7 +208,7 @@ Mock.mock('http://vtmer.cn/likeBook',
      }
 )
 
-Mock.mock('http://vtmer.cn/collect',
+Mock.mock('http://vtmer.cn/collectbook',
      {
           'message':'收藏成功'
      }

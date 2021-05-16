@@ -4,6 +4,18 @@
     display: none;
 }
 
+#personal .return_home {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: white;
+    margin: 5px 0;
+
+    cursor: pointer;
+
+    color: rgba(22, 22, 248, 0.571);
+}
+
 #personal .user {
     background-color: white;
     padding: 20px 30px;
