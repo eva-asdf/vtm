@@ -1,0 +1,63 @@
+@import 'reset.css';
+
+body {
+
+    /* 背景图充满界面 */
+    background: url('../img/bg\ .png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 100vh;
+
+}
+
+
+form {
+    width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+
+    position: fixed;
+    top: 100px;
+    right: 350px;
+}
+
+form * {
+    margin: 5px;
+}
+
+form input {
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(68, 68, 247, 0.734);
+}
+
+/* form input,
+form button {
+    outline: none;
+    border: none;
+    border: 1px solid rgba(68, 68, 247, 0.734);
+} */
+
+form button {
+    outline: none;
+    border: none;
+    height: 25px;
+    background-color: white;
+    padding: 0 10px;
+
+    border-radius: 5px;
+}
+
+form > button {
+    margin-top: 15px;
+}
+
+form #code {
+    width: 65%;
+}
